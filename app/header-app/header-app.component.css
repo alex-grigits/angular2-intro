@@ -1,0 +1,38 @@
+.wrapper {
+    background: #1976D2;
+    height: 50px;
+    min-height: 50px;    
+    padding: 0;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.24);
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+}
+
+header img {
+    width: 50px;
+}
+
+header h1 {
+    margin: 0 0 0 10px;
+    font-weight: 400;
+}
+
+a {
+    color: #ddd;
+    margin-left: 40px; 
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.active {
+    color: powderblue;
+    text-shadow: 4px 6px 10px rgba(0,0,0,0.7);
+    /*text-shadow: 1px 1px 30px rgba(255,255,255,0.9);*/
+}

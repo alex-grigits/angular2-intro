@@ -1,0 +1,17 @@
+<div class="col-md-12">
+    <h2>{{ titleDetails }}</h2>
+</div>
+<div class="col-md-12">
+    <div class="thumbnail" *ngIf="hotel">
+        <div class="preview">
+            <img src="http://lorempixel.com/1200/600/city" alt="hotel">
+        </div>
+        <div class="hotel-info">
+            <h3>{{ hotel.name }}, {{ hotel.locationCity }}</h3>
+            <p>{{ hotel.address }}</p>
+        </div>
+        <div class="price-box">
+            <h4>Price from: ${{hotel.price}}</h4>
+        </div>
+    </div>
+</div>
