@@ -3,7 +3,6 @@ import { Component, OnInit }     from '@angular/core';
 import { ActivatedRoute, Params} from '@angular/router';
 import { Location }              from '@angular/common';
 
-import { Hotel }        from '../classes/hotel';
 import { HotelService } from '../services/hotel.service';
 
 @Component ({
@@ -15,7 +14,7 @@ import { HotelService } from '../services/hotel.service';
 
 export class HotelDetailComponent implements OnInit {
     titleDetails: string = 'Hotel Details';
-    hotel: Hotel;
+    hotel = <any>[];
     
     constructor (
         private hotelService: HotelService,

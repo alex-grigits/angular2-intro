@@ -2,6 +2,7 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 import { RouterModule }  from '@angular/router';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent }            from './app.component';
 import { HeaderAppComponent }      from './header-app/header-app.component';
@@ -10,8 +11,8 @@ import { DepartmentListComponent } from './department-list/department-list.compo
 import { HotelListComponent }      from './hotel-list/hotel-list.component';
 import { HotelDetailComponent }    from './hotel-detail/hotel-detail.component';
 
-import { CityService }  from './services/city.service';
-import { HotelService } from './services/hotel.service';
+import { OfferService }  from './services/offer.service';
+import { HotelService }  from './services/hotel.service'; // for hotel-detail
 
 import { AppRoutingModule } from './app-routing.module';   
 
@@ -19,7 +20,8 @@ import { AppRoutingModule } from './app-routing.module';
     imports: [
         BrowserModule,
         FormsModule,
-        AppRoutingModule
+        AppRoutingModule,
+        HttpModule
     ],
     declarations: [
         AppComponent, 
@@ -30,8 +32,8 @@ import { AppRoutingModule } from './app-routing.module';
         HotelDetailComponent
     ],
     providers: [
-        CityService,
-        HotelService
+        OfferService,
+        HotelService // for hotel-detail
     ],
     bootstrap: [ AppComponent ]
 })

@@ -1,34 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { Router }            from '@angular/router';
 
-import { City }              from '../classes/city';
-import { CityService }       from '../services/city.service';
+import { OfferService }       from '../services/offer.service';
 
 @Component ({
     moduleId: module.id,
     selector: 'department-list',
     templateUrl: 'department-list.component.html',
-    styleUrls: ['department-list.component.css'],
-    providers: [CityService]
+    styleUrls: ['department-list.component.css']
 })
 
 export class DepartmentListComponent implements OnInit {
     titleCities = "Top Cities";
-    cities: City[]; // пока не знаю зачем???
-    
-    selectedCity: City;
+    cities = <any>[];
 
     constructor (
         private router: Router,
-        private cityService: CityService        
+        private cityService: OfferService        
     ){}
 
-    getCities(): void {
-        this.cityService.getCities().then(cities => this.cities = cities);
-    }
-
-    ngOnInit(): void {
-        this.getCities();
+    ngOnInit() {
+        this.cityService.fetchCities()
+            .subscribe(data => {
+                this.cities = data;
+            });
     }
 
 }

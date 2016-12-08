@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Hotel }             from '../classes/hotel';
-import { HotelService }      from '../services/hotel.service';
-
+import { OfferService }       from '../services/offer.service'; 
 
 @Component({
     moduleId: module.id,
@@ -13,17 +11,16 @@ import { HotelService }      from '../services/hotel.service';
 
 export class HotelListComponent implements OnInit{
     titleHotels: string = 'Hotels List';
-    hotels: Hotel[];
+    hotels = <any>[];
 
     constructor (
-        private hotelService: HotelService        
+        private hotelService: OfferService        
     ){}
 
-    getHotels(): void {
-        this.hotelService.getHotels().then(hotels => this.hotels = hotels);
-    }
-
-    ngOnInit(): void {
-        this.getHotels();
+    ngOnInit() {
+        this.hotelService.fetchHotels()
+            .subscribe(data => {
+                this.hotels = data;
+            });
     }
 }
