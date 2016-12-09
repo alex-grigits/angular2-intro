@@ -10,11 +10,15 @@ import { FooterAppComponent }      from './footer-app/footer-app.component';
 import { DepartmentListComponent } from './department-list/department-list.component';
 import { HotelListComponent }      from './hotel-list/hotel-list.component';
 import { HotelDetailComponent }    from './hotel-detail/hotel-detail.component';
+import { LoginFormComponent }    from './login/login-form.component';
 
 import { OfferService }  from './services/offer.service';
 import { HotelService }  from './services/hotel.service'; // for hotel-detail
 
-import { AppRoutingModule } from './app-routing.module';   
+import { AppRoutingModule } from './app-routing.module';
+
+import { DropdownDirective } from './header-app/dropdown.directive'; 
+import { SearchPipe } from './filters/search.pipe';  
 
 @NgModule({
     imports: [
@@ -29,7 +33,10 @@ import { AppRoutingModule } from './app-routing.module';
         HeaderAppComponent,
         FooterAppComponent,
         HotelListComponent,
-        HotelDetailComponent
+        HotelDetailComponent,
+        LoginFormComponent,
+        DropdownDirective,
+        SearchPipe
     ],
     providers: [
         OfferService,

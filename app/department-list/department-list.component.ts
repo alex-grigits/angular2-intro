@@ -3,6 +3,7 @@ import { Router }            from '@angular/router';
 
 import { OfferService }       from '../services/offer.service';
 
+
 @Component ({
     moduleId: module.id,
     selector: 'department-list',

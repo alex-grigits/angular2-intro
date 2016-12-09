@@ -1,0 +1,25 @@
+form {
+    width: 300px;
+    position: absolute;
+    top: -5px;
+    right: 0;
+    z-index: 10;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 10px 10px 32px -12px rgba(0,0,0,0.75);
+}
+
+.hide {
+    display: none;
+}
+
+form:after {
+    content: ''; 
+    position: absolute; /* Абсолютное позиционирование */
+    right: 40px;
+    top: -20px; /* Положение треугольника */
+    border: 10px solid transparent; /* Прозрачные границы */
+    border-bottom: 10px solid #fff; /* Добавляем треугольник */
+}
