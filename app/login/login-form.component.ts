@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from "@angular/forms";
 
 @Component({
     moduleId: module.id,
@@ -7,4 +8,18 @@ import { Component } from '@angular/core';
     styleUrls: ['login-form.component.css']
 })
 
-export class LoginFormComponent {}
+export class LoginFormComponent {
+    fadeIn = false;
+    onModal(){
+        return this.fadeIn = !this.fadeIn;        
+    }
+
+    user = {
+        'email': '',
+        'password': ''
+    }
+
+    onSubmit(form: NgForm) {
+        console.log(form.value);
+    }
+}

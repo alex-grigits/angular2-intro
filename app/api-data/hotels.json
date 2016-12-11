@@ -1,5 +1,5 @@
 [ 
-    { "id": 1,"name": "Danubius Hotel Regents Park","locationCountry": "United Kingdom","locationCity": "London","address": "18 Lodge Road, NW8 7 JT London, GB","price": 300,"urlImage": "https://media-cdn.tripadvisor.com/media/photo-s/0c/0f/d3/33/lobby.jpg" },
+    { "id": 1,"name": "Danubius Hotel Regents Park","locationCountry": "United Kingdom","locationCity": "London","address": "18 Lodge Road, NW8 7 JT London, GB","price": 300,"urlImage": "https://s-media-cache-ak0.pinimg.com/originals/00/a9/ec/00a9ec9cb4202aaed5cdaee6ad061c85.jpg" },
     { "id": 2,"name": "Hilton London Green Park","locationCountry": "United Kingdom","locationCity": "London","address": "354 Queenstown Road, SW84AE London, GB","price": 350,"urlImage": "http://fotos.hotelius.com/images/hoteles/500x500/594297_foto5_ROOM6.jpg" },
     { "id": 3,"name": "Grosvenor House Jw Marriott","locationCountry": "United Kingdom","locationCity": "London","address": "150 Bayswater Road, W2 4RT London, GB","price": 280,"urlImage": "https://s-media-cache-ak0.pinimg.com/originals/00/a9/ec/00a9ec9cb4202aaed5cdaee6ad061c85.jpg" }
 ]

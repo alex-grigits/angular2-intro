@@ -1,0 +1,24 @@
+#register {
+    padding: 0 15px;
+}
+
+.modal-lg {
+    max-width: 600px;
+}
+
+.modal-title {
+    padding: 15px;
+    text-align: center;
+}
+
+.invalid-message {
+    display: block;
+    position: absolute;
+    background-color: #f11;
+    color: #fff;
+    font-size: 10px;
+}
+
+.hobbies::first-child {
+    margin-left: 0;
+}

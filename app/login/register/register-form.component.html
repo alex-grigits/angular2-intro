@@ -1,0 +1,94 @@
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <h3 class="modal-title">Registration Form</h3>
+      <form class="form-horizontal" id="register" [formGroup]="regForm" (ngSubmit)="onSubmit()" >
+        <div formGroupName="userData">
+            <div class="form-group">
+                <label for="fname" class="col-sm-3 control-label">First name</label>
+                <div class="col-sm-9">
+                    <input type="text"
+                        class="form-control"
+                        id="fname"
+                        placeholder="Enter your first name"
+                        formControlName="fname" >
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="lname" class="col-sm-3 control-label">Last Name</label>
+                <div class="col-sm-9">
+                    <input type="text" 
+                        class="form-control"
+                        id="lname"
+                        placeholder="Enter your last name"
+                        formControlName="lname">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+                <div class="col-sm-9">
+                    <input type="text"
+                        class="form-control"
+                        id="inputEmail3"
+                        placeholder="Enter your email"
+                        formControlName="email">
+                    <div class="invalid-message" *ngIf="!regForm.controls['userData'].controls['email'].valid">Invalid email</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
+          <div class="col-sm-9">
+
+            <input type="password"
+                   class="form-control"
+                   id="inputPassword3"
+                   placeholder="Password"
+                   formControlName="password">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-3 col-sm-9">
+            <div class="radio" *ngFor="let g of genders">
+              <label>
+                <input type="radio"
+                       formControlName="gender"
+                       [value]="g">
+                {{ g }}
+              </label>
+            </div>
+          </div>
+        </div>
+        <!--Hobbies input-->
+        <div class="form-group" formArrayName="hobbies">
+            <label for="hobbies" class="col-sm-3 control-label">Hobbies</label>
+            <div class="col-sm-offset-3 col-sm-6 hobbies" *ngFor="let hobby of regForm.controls['hobbies'].controls; let i=index" >
+                <input type="text"
+                    class="form-control"
+                    id="hobbies"
+                    placeholder="Enter your hobbies"
+                    formControlName="{{ i }}">
+            </div>
+            <div class="col-sm-3">
+              <button class="btn btn-info" type="button" (click)="onAddHobby()" >Add hobby</button>
+            </div>
+        </div>
+        <!--Checkbox-->
+        <div class="form-group">
+          <div class="col-sm-offset-3 col-sm-9">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> Remember me
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-3 col-sm-9">
+            <button type="submit" class="btn btn-default" [disabled]="!regForm.valid" >Register</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

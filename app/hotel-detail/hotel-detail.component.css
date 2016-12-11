@@ -1,21 +1,35 @@
-.thumbnail {
+.header-item, .hotel-item {
+    padding: 0;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
-    min-height: 600px;
-    box-shadow: 10px 10px 88px -16px rgba(0,0,0,0.75);
+    padding: 0 15px;
+}
+
+.header-item {
+    justify-content: space-between;
+}
+
+.hotel-item {
+    flex-direction: column;
+}
+
+.item {
+    align-self: center;
+}
+
+.thumbnail {
+    align-self: center;
+    flex-basis: 250px;
+    box-shadow: 10px 10px 32px -12px rgba(0,0,0,0.75);
 }
 
 .preview img {
     width: 100%;
 }
 
-.hotel-info {
-    flex-grow: 1;
-    align-self: flex-start;
-    padding: 40px 0 0 40px;
-}
-
 .price-box {
     color: orangered;    
 }
+

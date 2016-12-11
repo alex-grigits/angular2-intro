@@ -1,25 +1,27 @@
 <main>
-  <div class="wrapper">
-    <div class="header-item">
-        <div class="item">
-            <h2>{{ titleCities }}</h2>
-        </div>
-        <div class="item">
-            <form id="filter" class="form-inline">
-                <label>Search the Department</label>
-                <input type="text" [(ngModel)]="term" name="term" >
-            </form>
-        </div>
-    </div>
-    <div class="department-item">
-        <div class="thumbnail" *ngFor="let city of cities | search: term">
-            <img [src]="city.urlImage" alt="city">
-            <div class="caption">
-                <h3>{{ city.name }}</h3>
-                <p>{{ city.locationCountry }}</p>
-                <p><a class="btn btn-default disabled" role="button">View hotels</a></p>
+    <div class="wrapper">
+        <div class="header-item">
+            <div class="item">
+                <h2>{{ titleCities }}</h2>
+            </div>
+            <div class="item">
+                <form id="filter" class="form-inline">
+                    <div class="form-group">
+                        <label>Search the Department</label>
+                        <input type="text" [(ngModel)]="term" name="term" class="form-control">
+                    </div>               
+                </form>
             </div>
         </div>
-    </div>
+        <div class="department-item">
+            <div class="thumbnail" *ngFor="let city of cities | search: term">
+                <img [src]="city.urlImage" alt="city">
+                <div class="caption">
+                    <h3>{{ city.name }}</h3>
+                    <p>{{ city.locationCountry }}</p>
+                    <p><a class="btn btn-default disabled" role="button">View hotels</a></p>
+                </div>
+            </div>
+        </div>
     </div>
 </main>

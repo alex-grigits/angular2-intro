@@ -1,8 +1,9 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { RouterModule }  from '@angular/router';
 import { HttpModule } from '@angular/http';
+
 
 import { AppComponent }            from './app.component';
 import { HeaderAppComponent }      from './header-app/header-app.component';
@@ -10,7 +11,8 @@ import { FooterAppComponent }      from './footer-app/footer-app.component';
 import { DepartmentListComponent } from './department-list/department-list.component';
 import { HotelListComponent }      from './hotel-list/hotel-list.component';
 import { HotelDetailComponent }    from './hotel-detail/hotel-detail.component';
-import { LoginFormComponent }    from './login/login-form.component';
+import { LoginFormComponent }      from './login/login-form.component';
+import { RegisterFormComponent }   from './login/register/register-form.component';
 
 import { OfferService }  from './services/offer.service';
 import { HotelService }  from './services/hotel.service'; // for hotel-detail
@@ -24,6 +26,7 @@ import { SearchPipe } from './filters/search.pipe';
     imports: [
         BrowserModule,
         FormsModule,
+        ReactiveFormsModule,
         AppRoutingModule,
         HttpModule
     ],
@@ -35,6 +38,7 @@ import { SearchPipe } from './filters/search.pipe';
         HotelListComponent,
         HotelDetailComponent,
         LoginFormComponent,
+        RegisterFormComponent,
         DropdownDirective,
         SearchPipe
     ],
